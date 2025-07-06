@@ -40,10 +40,20 @@ def main(args, seed=None, baked_server_options: Optional[Dict[str, object]] = No
     multiworld.plando_items = args.plando_items.copy()
     multiworld.plando_texts = args.plando_texts.copy()
     multiworld.plando_connections = args.plando_connections.copy()
+    multiworld.plando_equipment = args.plando_equipments.copy()
+    multiworld.plando_skill_set_strength = args.plando_strength.copy()
+    multiworld.plando_skill_set_dexterity = args.plando_dexterity.copy()
+    multiworld.plando_skill_set_intelligence = args.plando_intelligence.copy()
+    multiworld.plando_skill_set_constitution = args.constitution.copy()
+    multiworld.plando_skill_set_acuity = args.acuity.copy()
+    multiworld.plando_skill_set_insanity = args.insanity.copy()
+    multiworld.plando_max_set_ability = args.max.copy()
+    multiworld.p
     multiworld.game = args.game.copy()
     multiworld.player_name = args.name.copy()
     multiworld.sprite = args.sprite.copy()
     multiworld.sprite_pool = args.sprite_pool.copy()
+    multiworld.main = args.main.copy()
 
     multiworld.set_options(args)
     if args.csv_output:
@@ -77,6 +87,11 @@ def main(args, seed=None, baked_server_options: Optional[Dict[str, object]] = No
                         f"{len(cls.location_names):{location_count}} "
                         f"Locations (IDs: {min(cls.location_id_to_name):{location_digits}} - "
                         f"{max(cls.location_id_to_name):{location_digits}})")
+                        f"{str(cls.str_id_to_name):{str_digits}}) | "
+                        f"{dex(cls.dex_id_to_name):{dex_digits}}) | "
+                        f"{int(cls.int_id_to_name):{dex_digits}}) | "
+                        f"{con(cls.ins_id_to_name):{ins_digits}}) | "
+                        f"{
 
     del item_digits, location_digits, item_count, location_count
 
