@@ -48,7 +48,6 @@ def main(args, seed=None, baked_server_options: Optional[Dict[str, object]] = No
     multiworld.plando_skill_set_acuity = args.acuity.copy()
     multiworld.plando_skill_set_insanity = args.insanity.copy()
     multiworld.plando_max_set_ability = args.max.copy()
-    multiworld.p
     multiworld.game = args.game.copy()
     multiworld.player_name = args.name.copy()
     multiworld.sprite = args.sprite.copy()
@@ -90,8 +89,11 @@ def main(args, seed=None, baked_server_options: Optional[Dict[str, object]] = No
                         f"{str(cls.str_id_to_name):{str_digits}}) | "
                         f"{dex(cls.dex_id_to_name):{dex_digits}}) | "
                         f"{int(cls.int_id_to_name):{dex_digits}}) | "
-                        f"{con(cls.ins_id_to_name):{ins_digits}}) | "
-                        f"{
+                        f"{con(cls.con_id_to_name):{con_digits}}) | "
+                        f"{vig(cls.vig_id_to_name):{vig_digits}}) | "
+                        f"{max(cls.max_id_to_name):{max_digits}}) | "
+                        f"{scr(cls.scr_id_to_name):{scr_digits}}) | "
+                        
 
     del item_digits, location_digits, item_count, location_count
 
